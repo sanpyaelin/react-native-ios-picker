@@ -41,20 +41,20 @@ const data = [{name: 'SanPyaeLin', code: '22'},{name: 'Jhon', code: '1'},{name: 
 </IOSPicker>
 ```
 
-##Example
+## Example
 
 Check full example in the [example](https://github.com/sanpyaelin/react-native-ios-picker/blob/master/example/index.js) folder.
 
 ## Props
 
-- [`data`](readme.md#data)
-- [`mode`](readme.md#mode)
-- [`onValueChange`](readme.md#onvaluechange)
-- [`selectedValue`](readme.md#selectedvalue)
-- [`style`](readme.md#style)
-- [`textStyle`](readme.md#textStyle)
-- [`pickerItemStyle`](readme.md#pickerItemStyle)
-- [`collapseViewStyle`](readme.md#collapseViewStyle)
+- [`data`](#data)
+- [`mode`](#mode)
+- [`onValueChange`](#onvaluechange)
+- [`selectedValue`](#selectedvalue)
+- [`style`](#style)
+- [`textStyle`](#textStyle)
+- [`pickerItemStyle`](#pickerItemStyle)
+- [`collapseViewStyle`](#collapseViewStyle)
 ---
 
 ## Reference
