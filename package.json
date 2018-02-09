@@ -1,0 +1,30 @@
+{
+  "name": "react-native-ios-picker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanpyaelin/react-native-ios-picker.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "picker",
+    "ios",
+    "collapse",
+    "modal"
+  ],
+  "author": "San Pyae Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanpyaelin/react-native-ios-picker/issues"
+  },
+  "dependencies": {
+    "react-native-collapse-view": "1.0.0"
+  },
+  "homepage": "https://github.com/sanpyaelin/react-native-ios-picker#readme"
+}
