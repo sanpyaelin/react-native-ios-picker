@@ -30,11 +30,10 @@ data type is object
 ```js
 const data = [{name: 'SanPyaeLin', code: '22'},{name: 'Jhon', code: '1'},{name: 'Marry', code: '2'}]
 <IOSPicker 
-  data={data}
   selectedValue={this.state.selectedValue}
   onValueChange={(d, i)=> this.change(d, i)}>
   { 
-    Country.map((item, index)=>
+    data.map((item, index)=>
       <Picker.Item key={index} label={item.name} value={item.code} />
     )
   }
