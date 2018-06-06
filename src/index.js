@@ -9,10 +9,26 @@ const propTypes = {
   selectedValueIndex: PropTypes.string,
   onValueChange: PropTypes.func,
   data: PropTypes.array,
-  style: PropTypes.object,
-  textStyle: PropTypes.object,
-  pickerItemStyle: PropTypes.object,
-  collapseViewStyle: PropTypes.object,
+  style: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  textStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  selectedTextStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  pickerItemStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  collapseViewStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
 }
 
 const defaultProps = {
@@ -90,7 +106,7 @@ class IOSPicker extends Component {
   }
 
   renderModalPicker() {
-    const { style, textStyle } = this.props;
+    const { style, selectedTextStyle, textStyle } = this.props;
     return (
     <View>
       <TouchableOpacity 
@@ -98,7 +114,7 @@ class IOSPicker extends Component {
         onPress={this.pressItem}
         style={[defaultStyles.container,style]}
       >
-        <Text style={textStyle}>
+        <Text style={this.state.modalVisible ? selectedTextStyle : textStyle}>
           {this.state.selectedValue}
         </Text>
       </TouchableOpacity>
