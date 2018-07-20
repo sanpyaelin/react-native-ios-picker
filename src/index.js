@@ -48,8 +48,8 @@ class IOSPicker extends Component {
     this.setState({modalVisible:true});
   }
 
-  valueChange = (data, index, mode) => {
-    this.setState({modalVisible: mode === 'alternateModal' ? true : false, selectedValue: data, selected: data});
+  valueChange = (data, index) => {
+    this.setState({modalVisible: this.props.mode === 'alternateModal' ? true : false, selectedValue: data, selected: data});
     this.props.onValueChange(data, index);
   }
 
