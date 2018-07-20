@@ -126,7 +126,7 @@ class IOSPicker extends Component {
           </View>
         </TouchableOpacity>
       </Modal>
-      {mode!=='modal' ? this.renderCollapsePicker() : this.renderModalPicker()}
+      {mode!=='modal' && mode!=='alternateModal' ? this.renderCollapsePicker() : this.renderModalPicker()}
     </View>
     );
   }
