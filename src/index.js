@@ -49,7 +49,7 @@ class IOSPicker extends Component {
   }
 
   valueChange = (data, index) => {
-    this.setState({modalVisible:false, selectedValue: data, selected: data});
+    this.setState({modalVisible: this.props.mode === 'alternateModal' ? true : false, selectedValue: data, selected: data});
     this.props.onValueChange(data, index);
   }
 
@@ -114,7 +114,7 @@ class IOSPicker extends Component {
         <TouchableOpacity activeOpacity={1} onPress={() => this.setState({modalVisible:false})} style={defaultStyles.overlay}>
           <View style={defaultStyles.picker}>
             <PickerIOS 
-              selectedValue={this.state.selected}
+              selectedValue={this.state.selectedValue}
               onValueChange={this.valueChange}>
               { 
                 data && data.map((d)=>
@@ -126,7 +126,7 @@ class IOSPicker extends Component {
           </View>
         </TouchableOpacity>
       </Modal>
-      {mode!=='modal' ? this.renderCollapsePicker() : this.renderModalPicker()}
+      {mode!=='modal' && mode!=='alternateModal' ? this.renderCollapsePicker() : this.renderModalPicker()}
     </View>
     );
   }
