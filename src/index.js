@@ -114,7 +114,7 @@ class IOSPicker extends Component {
         <TouchableOpacity activeOpacity={1} onPress={() => this.setState({modalVisible:false})} style={defaultStyles.overlay}>
           <View style={defaultStyles.picker}>
             <PickerIOS 
-              selectedValue={this.state.selected}
+              selectedValue={this.state.selectedValue}
               onValueChange={this.valueChange}>
               { 
                 data && data.map((d)=>
